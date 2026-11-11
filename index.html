@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0D0D11">
+    <meta name="description" content="Descubre una colección exclusiva de perfumería árabe de nicho en Fragancias Ns.">
+    <title>Fragancias Ns | Perfumería Árabe de Nicho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind = {
+            config: {
+                theme: {
+                    extend: {
+                        colors: {
+                            'dark-deep': '#0D0D11',
+                            'dark-surface': '#16161E',
+                            'light-neutral': '#E2E8F0',
+                            'cyan-neon': '#00F5D4',
+                            gold: '#D4AF37'
+                        },
+                        fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-deep text-light-neutral font-sans antialiased">
+    <header class="fixed top-0 left-0 z-40 w-full border-b border-white/10 bg-dark-deep/95 backdrop-blur-md" id="header">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+            <a href="#inicio" class="flex shrink-0 items-center gap-3" aria-label="Fragancias Ns, inicio">
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl border border-gold/40 bg-dark-surface text-lg font-bold text-gold">Ns</span>
+                <span class="flex flex-col">
+                    <span class="text-sm font-bold uppercase tracking-widest sm:text-lg">Fragancias Ns</span>
+                    <span class="hidden text-[10px] uppercase tracking-[0.2em] text-cyan-neon sm:block">Niche Arabian Perfumery</span>
+                </span>
+            </a>
+            <nav class="hidden items-center gap-6 lg:flex" aria-label="Navegación principal">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#catalogo" class="nav-link">Catálogo</a>
+                <a href="#notas" class="nav-link">Notas</a>
+                <a href="#sobre-nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-2 sm:gap-3">
+                <label class="relative hidden sm:block">
+                    <span class="sr-only">Buscar fragancias</span>
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-xs text-white/40"></i>
+                    <input type="search" id="searchInput" placeholder="Buscar fragancia..." class="w-40 rounded-full border border-white/10 bg-dark-surface py-2 pl-9 pr-3 text-xs focus:border-cyan-neon focus:outline-none lg:w-52">
+                </label>
+                <label class="sr-only" for="currencySelect">Moneda</label>
+                <select id="currencySelect" class="rounded-lg border border-white/10 bg-dark-surface px-2 py-2 text-xs focus:border-cyan-neon focus:outline-none" aria-label="Seleccionar moneda">
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                </select>
+                <button id="cartBtn" type="button" class="relative rounded-xl border border-white/10 bg-dark-surface p-2.5 hover:border-violet-400" aria-label="Abrir carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cartCount" class="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-400 px-1 text-[10px] font-bold text-slate-950">0</span>
+                </button>
+                <button id="menuBtn" type="button" class="rounded-xl border border-white/10 bg-dark-surface p-2.5 lg:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden border-t border-white/10 bg-dark-deep px-5 py-5 lg:hidden">
+            <label class="relative mb-4 block sm:hidden">
+                <span class="sr-only">Buscar fragancias</span>
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-xs text-white/40"></i>
+                <input type="search" id="searchMobileInput" placeholder="Buscar fragancia..." class="w-full rounded-xl border border-white/10 bg-dark-surface py-2.5 pl-9 pr-3 text-sm focus:border-cyan-neon focus:outline-none">
+            </label>
+            <nav class="space-y-4" aria-label="Navegación móvil">
+                <a href="#inicio" class="mobile-link block">Inicio</a>
+                <a href="#catalogo" class="mobile-link block">Catálogo árabe</a>
+                <a href="#notas" class="mobile-link block">Notas olfativas</a>
+                <a href="#sobre-nosotros" class="mobile-link block">Sobre nosotros</a>
+                <a href="#contacto" class="mobile-link block">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-gradient flex min-h-[88vh] scroll-mt-20 items-center overflow-hidden px-4 pb-16 pt-28 sm:px-6">
+            <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+                <div class="relative z-10 text-center lg:text-left">
+                    <span class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-dark-surface px-4 py-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                        <i class="fa-solid fa-sparkles"></i> El arte de la perfumería árabe
+                    </span>
+                    <h1 class="mb-6 text-4xl font-bold leading-tight sm:text-6xl">Aromas que cuentan <span class="text-cyan-neon">historias</span></h1>
+                    <p class="mx-auto mb-8 max-w-xl text-base leading-7 text-white/65 lg:mx-0">Explora fragancias de nicho inspiradas en los tesoros del Oriente. Ingredientes memorables, carácter único y una estela que permanece.</p>
+                    <div class="flex flex-wrap justify-center gap-3 lg:justify-start">
+                        <a href="#catalogo" class="rounded-xl bg-violet-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-violet-300">Explorar colección</a>
+                        <a href="#sobre-nosotros" class="rounded-xl border border-white/20 px-6 py-3 font-semibold transition hover:border-gold hover:text-gold">Nuestra esencia</a>
+                    </div>
+                    <div class="mt-10 flex justify-center gap-8 text-left lg:justify-start">
+                        <div><strong class="block text-xl text-gold">100 ml</strong><span class="text-xs text-white/50">Esencias selectas</span></div>
+                        <div><strong class="block text-xl text-gold">25</strong><span class="text-xs text-white/50">Fragancias en catálogo</span></div>
+                        <div><strong class="block text-xl text-gold">★★★★★</strong><span class="text-xs text-white/50">Calidad de nicho</span></div>
+                    </div>
+                </div>
+                <div class="relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96">
+                    <div class="absolute inset-0 rounded-full bg-cyan-neon/10 blur-3xl"></div>
+                    <div class="relative flex h-60 w-60 items-center justify-center rounded-full border border-gold/30 bg-dark-surface/80 sm:h-80 sm:w-80">
+                        <div class="absolute inset-5 rounded-full border border-white/10"></div>
+                        <i class="fa-solid fa-spray-can-sparkles text-8xl text-gold drop-shadow-[0_0_24px_rgba(212,175,55,0.35)] sm:text-9xl" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="scroll-mt-20 px-4 py-20 sm:px-6">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-10 text-center">
+                    <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-cyan-neon">Colección exclusiva</p>
+                    <h2 class="text-3xl font-bold sm:text-4xl">Catálogo árabe</h2>
+                    <p class="mx-auto mt-3 max-w-xl text-sm text-white/55">Encuentra tu próxima firma olfativa. Filtra por familia aromática o estilo. Catálogo referencial: confirma existencias y precios por WhatsApp.</p>
+                </div>
+                <div class="mb-5 flex flex-wrap justify-center gap-2" aria-label="Filtrar por familia olfativa">
+                    <button class="filter-btn filter-active" data-filter="all" type="button">Todos</button>
+                    <button class="filter-btn" data-filter="oud" type="button">Oud</button>
+                    <button class="filter-btn" data-filter="ambar" type="button">Ámbar</button>
+                    <button class="filter-btn" data-filter="especias" type="button">Especias</button>
+                    <button class="filter-btn" data-filter="floral" type="button">Florales</button>
+                </div>
+                <div class="mb-8 flex flex-wrap justify-center gap-2" aria-label="Filtrar por estilo">
+                    <button class="gender-btn gender-active" data-gender="all" type="button">Todos los estilos</button>
+                    <button class="gender-btn" data-gender="ella" type="button">Para ella</button>
+                    <button class="gender-btn" data-gender="el" type="button">Para él</button>
+                    <button class="gender-btn" data-gender="unisex" type="button">Unisex</button>
+                </div>
+                <div id="productGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section id="notas" class="scroll-mt-20 border-y border-white/5 bg-dark-surface/50 px-4 py-20 sm:px-6">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-10 text-center">
+                    <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-gold">Una experiencia sensorial</p>
+                    <h2 class="text-3xl font-bold">Notas olfativas</h2>
+                    <p class="mt-3 text-sm text-white/55">Explora las familias que dan vida a nuestra colección.</p>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <article class="note-card"><i class="fa-solid fa-tree text-2xl text-gold"></i><h3>Oud y maderas</h3><p>Profundas, cálidas y resinosas; el corazón de la perfumería oriental.</p></article>
+                    <article class="note-card"><i class="fa-solid fa-sun text-2xl text-gold"></i><h3>Ámbar</h3><p>Dulzura envolvente y sensual con una estela cálida y duradera.</p></article>
+                    <article class="note-card"><i class="fa-solid fa-fire text-2xl text-gold"></i><h3>Especias</h3><p>Cardamomo, azafrán y canela para aromas vibrantes y con carácter.</p></article>
+                    <article class="note-card"><i class="fa-solid fa-spa text-2xl text-gold"></i><h3>Florales</h3><p>Rosa y jazmín que aportan elegancia, frescura y sofisticación.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" class="scroll-mt-20 px-4 py-20 sm:px-6">
+            <div class="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+                <div class="flex min-h-64 items-center justify-center rounded-3xl border border-gold/20 bg-gradient-to-br from-dark-surface to-dark-deep">
+                    <i class="fa-solid fa-moon text-8xl text-gold/80" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-cyan-neon">Nuestra historia</p>
+                    <h2 class="mb-5 text-3xl font-bold">Tradición que deja huella</h2>
+                    <p class="mb-4 leading-7 text-white/65">En Fragancias Ns celebramos la riqueza de la perfumería árabe y el poder de los aromas para evocar recuerdos. Nuestra selección reúne perfiles intensos, elegantes y cuidadosamente elegidos para acompañarte en cada ocasión.</p>
+                    <p class="leading-7 text-white/65">Descubre tu favorito, explora nuevas notas y encuentra una fragancia que hable de ti.</p>
+                    <a href="#catalogo" class="mt-6 inline-flex items-center gap-2 font-semibold text-gold hover:text-cyan-neon">Descubrir la colección <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="scroll-mt-20 border-t border-white/5 bg-dark-surface/50 px-4 py-16 sm:px-6">
+            <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
+                <div>
+                    <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-cyan-neon">Mantente al tanto</p>
+                    <h2 class="text-2xl font-bold">El club de las fragancias</h2>
+                    <p class="mt-3 max-w-lg text-sm leading-6 text-white/55">Recibe novedades y lanzamientos. En esta versión de demostración, la suscripción se guarda solo en este navegador.</p>
+                    <form id="newsletterForm" class="mt-5 flex max-w-lg flex-col gap-3 sm:flex-row">
+                        <label class="sr-only" for="newsletterEmail">Correo electrónico</label>
+                        <input id="newsletterEmail" type="email" placeholder="Tu correo electrónico" required class="min-w-0 flex-1 rounded-xl border border-white/10 bg-dark-deep px-4 py-3 text-sm focus:border-cyan-neon focus:outline-none">
+                        <button type="submit" class="rounded-xl bg-gold px-5 py-3 text-sm font-bold text-dark-deep hover:brightness-110">Suscribirme</button>
+                    </form>
+                    <p id="newsletterMsg" class="mt-3 hidden text-sm text-cyan-neon" role="status"></p>
+                </div>
+                <div class="md:justify-self-end">
+                    <h2 class="text-xl font-bold">¿Tienes preguntas?</h2>
+                    <p class="mt-3 max-w-md text-sm leading-6 text-white/55">¿Dudas sobre disponibilidad, precio o métodos de pago? Escríbenos y te ayudaremos a elegir tu aroma.</p>
+                    <a href="https://wa.me/584123028058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20fragancias." target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 font-semibold text-cyan-neon hover:text-gold">Escríbenos por WhatsApp <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t border-white/10 px-4 py-8 text-center text-xs text-white/40">
+        <div class="mb-5 flex justify-center gap-5">
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok (agrega aquí el perfil de la tienda)"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram (agrega aquí el perfil de la tienda)"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook (agrega aquí el perfil de la tienda)"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
+        </div>
+        <p>© <span id="currentYear"></span> Fragancias Ns. Perfumería árabe de nicho.</p>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/584123028058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20fragancias." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Fragancias Ns por WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span>
+    </a>
+
+    <div id="cartDrawer" class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity" aria-hidden="true">
+        <button id="cartOverlay" type="button" class="absolute inset-0 h-full w-full bg-black/70" aria-label="Cerrar carrito"></button>
+        <aside id="cartPanel" class="absolute right-0 top-0 flex h-full w-full max-w-md translate-x-full flex-col border-l border-white/10 bg-dark-deep transition-transform" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+            <div class="flex items-center justify-between border-b border-white/10 p-5">
+                <h2 id="cartTitle" class="text-lg font-bold">Tu carrito</h2>
+                <button id="closeCart" type="button" class="rounded-lg p-2 text-white/60 hover:text-white" aria-label="Cerrar carrito"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div id="cartItemsList" class="flex-1 space-y-3 overflow-y-auto p-5"></div>
+            <div class="border-t border-white/10 p-5">
+                <div class="mb-4 flex justify-between text-sm"><span class="text-white/60">Subtotal</span><strong id="cartSubtotal" class="text-gold">$0.00</strong></div>
+                <label for="paymentMethod" class="mb-2 block text-xs font-semibold text-white/70">Método de pago</label>
+                <select id="paymentMethod" class="mb-3 w-full rounded-xl border border-white/10 bg-dark-surface px-3 py-3 text-sm text-light-neutral focus:border-violet-400 focus:outline-none">
+                    <option value="">Selecciona un método</option>
+                    <option value="ZELLE">ZELLE</option>
+                    <option value="PAGO MOVIL">PAGO MOVIL</option>
+                    <option value="BINANCE">BINANCE</option>
+                </select>
+                <p id="paymentMethodError" class="mb-3 hidden text-xs text-red-300" role="alert">Selecciona un método de pago para continuar.</p>
+                <p class="mb-4 text-xs leading-5 text-white/40">No se procesa el pago en la web. El recibo se prepara para que lo envíes por WhatsApp.</p>
+                <button id="checkoutBtn" type="button" class="w-full rounded-xl bg-violet-400 px-4 py-3 font-bold text-slate-950 hover:bg-violet-300">Continuar</button>
+            </div>
+        </aside>
+    </div>
+
+    <div id="quickViewModal" class="pointer-events-none fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-black/80 p-4 opacity-0 transition-opacity" aria-hidden="true">
+        <button id="modalOverlay" type="button" class="absolute inset-0 h-full w-full cursor-default" aria-label="Cerrar vista rápida"></button>
+        <section id="modalContainer" class="relative my-auto grid w-full max-w-3xl scale-95 gap-6 rounded-2xl border border-white/10 bg-dark-surface p-5 transition-transform sm:p-7 md:grid-cols-2" role="dialog" aria-modal="true" aria-label="Detalles de la fragancia">
+            <button type="button" onclick="closeModal()" class="absolute right-3 top-3 z-10 rounded-lg bg-dark-deep/70 p-2 text-white/70 hover:text-white" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modalContent" class="col-span-full grid gap-6 md:grid-cols-2"></div>
+        </section>
+    </div>
+
+    <div id="checkoutModal" class="pointer-events-none fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4 opacity-0 transition-opacity" aria-hidden="true">
+        <div class="absolute inset-0" data-close-checkout></div>
+        <section class="relative z-10 max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-white/10 bg-dark-surface p-6" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+            <button type="button" data-close-checkout class="absolute right-4 top-4 rounded-lg p-2 text-white/60 hover:text-white" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="checkoutTitle" class="mb-2 text-xl font-bold">Resumen del pedido</h2>
+            <p class="mb-4 text-sm leading-6 text-white/55">Revisa los datos del recibo. Al continuar se abrirá WhatsApp con el mensaje preparado; tendrás que pulsar Enviar para compartirlo con la tienda.</p>
+            <div id="checkoutSummary" class="mb-5 space-y-2 border-y border-white/10 py-4 text-sm"></div>
+            <form id="checkoutForm" class="space-y-3">
+                <label class="block text-xs text-white/70">Nombre<input name="name" autocomplete="name" required maxlength="100" class="mt-1 w-full rounded-lg border border-white/10 bg-dark-deep px-3 py-2.5 text-sm focus:border-cyan-neon focus:outline-none"></label>
+                <label class="block text-xs text-white/70">Teléfono de contacto (opcional)<input name="phone" type="tel" autocomplete="tel" maxlength="30" class="mt-1 w-full rounded-lg border border-white/10 bg-dark-deep px-3 py-2.5 text-sm focus:border-violet-400 focus:outline-none"></label>
+                <label class="block text-xs text-white/70">Referencia de pago (opcional)<input name="reference" maxlength="80" class="mt-1 w-full rounded-lg border border-white/10 bg-dark-deep px-3 py-2.5 text-sm focus:border-violet-400 focus:outline-none"></label>
+                <button type="submit" class="w-full rounded-xl bg-violet-400 px-4 py-3 font-bold text-slate-950 hover:bg-violet-300">Crear recibo y abrir WhatsApp</button>
+            </form>
+            <p id="checkoutMessage" class="mt-4 hidden text-sm text-cyan-neon" role="status"></p>
+            <a id="whatsappReceiptLink" class="mt-3 hidden w-full rounded-xl border border-violet-300 px-4 py-3 text-center text-sm font-bold text-violet-200 hover:bg-violet-400/10" target="_blank" rel="noopener noreferrer">Abrir el recibo en WhatsApp</a>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

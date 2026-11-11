@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background-color: var(--bg-dark-deep);
+  }
+}
+
+/* Colores personalizados y temas oscuros */
+:root {
+  --bg-dark-deep: #0D0D11;
+  --bg-dark-surface: #16161E;
+  --light-neutral: #E2E8F0;
+  --cyan-neon: #00F5D4;
+  --gold: #D4AF37;
+  --accent-purple: #A78BFA;
+}
+
+.bg-dark-deep { background-color: var(--bg-dark-deep); }
+.bg-dark-surface { background-color: var(--bg-dark-surface); }
+.text-light-neutral { color: var(--light-neutral); }
+.text-cyan-neon { color: var(--cyan-neon); }
+.bg-cyan-neon { background-color: var(--cyan-neon); }
+.border-cyan-neon { border-color: var(--cyan-neon); }
+.text-gold { color: var(--gold); }
+.bg-gold { background-color: var(--gold); }
+.border-gold { border-color: var(--gold); }
+
+/* Gradientes sutiles personalizados */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 20%, #16161E 0%, #0D0D11 70%);
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 75% 45%, rgba(0, 245, 212, 0.07), transparent 35%),
+    radial-gradient(circle at 50% 20%, #16161E 0%, #0D0D11 70%);
+}
+
+.nav-link,
+.mobile-link {
+  color: rgba(226, 232, 240, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 160ms ease;
+}
+
+.nav-link:hover,
+.mobile-link:hover {
+  color: var(--cyan-neon);
+}
+
+.filter-btn,
+.gender-btn {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  background: var(--bg-dark-deep);
+  color: var(--light-neutral);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.filter-btn:hover,
+.gender-btn:hover {
+  border-color: var(--accent-purple);
+}
+
+.filter-btn.filter-active {
+  border-color: var(--accent-purple);
+  background: var(--accent-purple);
+  color: #171126;
+}
+
+.gender-btn.gender-active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--bg-dark-deep);
+}
+
+.note-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  background: var(--bg-dark-deep);
+  padding: 1.5rem;
+}
+
+.note-card h3 {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.note-card p {
+  margin-top: 0.5rem;
+  color: rgba(226, 232, 240, 0.55);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(226, 232, 240, 0.7);
+  font-size: 0.8rem;
+  transition: color 160ms ease;
+}
+
+.social-link i {
+  font-size: 1.1rem;
+}
+
+.social-link:hover {
+  color: var(--accent-purple);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  background: var(--accent-purple);
+  padding: 0.85rem 1.15rem;
+  color: #171126;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+  background: #C4B5FD;
+}
+
+.whatsapp-float i {
+  font-size: 1.3rem;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 3px;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D11;
+}
+::-webkit-scrollbar-thumb {
+  background: #232332;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F5D4;
+}
