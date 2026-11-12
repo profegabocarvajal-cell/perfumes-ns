@@ -2,45 +2,49 @@
 const products = [
     {
         id: 1,
-        name: "Oud Al-Malik",
+        name: "Oud For Glory",
         arabicName: "عود الملك",
         category: "oud",
         gender: "unisex",
-        priceUSD: 180.00,
+        priceUSD: 35.00,
         rating: 5,
         reviewsCount: 42,
         notes: "Oud Camboyano, Cuero ahumado, Rosa Taif",
         description: "Un extracto real de oud envejecido en barricas de roble durante 12 años. Intensidad nocturna absoluta con una fijación superior a 24 horas.",
         icon: "fa-crown",
-        badge: "Bestseller"
+        badge: "Bestseller",
+        // Usa una ruta relativa, por ejemplo "images/oud-al-malik.jpg".
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYhFQqsRgJ5mFVaJbRX2FISkkuVfIl-iTcK2poS4HxDvlG_EiBQpAPAwH-kIMhxPLZ&s=10&ec=122259019"
     },
     {
         id: 2,
-        name: "Ambar Zahra",
+        name: "Yara",
         arabicName: "زهرا الأنهار",
         category: "ambar",
         gender: "ella",
-        priceUSD: 145.00,
+        priceUSD: 45.00,
         rating: 5,
         reviewsCount: 28,
         notes: "Ámbar dorado, Vainilla Bourbon, Canela de Ceylán",
         description: "Una sinfonía cálida y dulce que evoca las puestas de sol sobre los palacios orientales. Seductor y envolvente.",
         icon: "fa-sun",
-        badge: "Exclusivo"
+        badge: "Exclusivo",
+        image: "https://claritasmakeupve.com/wp-content/uploads/2026/06/4-1.png"
     },
     {
         id: 3,
-        name: "Layali Taj",
+        name: "9 pm Rebel",
         arabicName: "ليالي تاج",
         category: "especias",
         gender: "el",
-        priceUSD: 160.00,
+        priceUSD: 60.00,
         rating: 4,
         reviewsCount: 35,
         notes: "Cardamomo negro, Nuez moscada, Sándalo",
         description: "Especias orientales vibrantes fundidas con maderas nobles. Diseñado para el hombre carismático y de presencia imponente.",
         icon: "fa-fire",
-        badge: "Nuevo"
+        badge: "Nuevo",
+        image: "https://www.farmadon.com.ve/wp-content/uploads/2025/02/Afnan-9-Pm-Rebel-Perfume-Unisex-100Ml-4.jpeg"
     },
     {
         id: 4,
@@ -54,7 +58,8 @@ const products = [
         notes: "Rosa de Damasco, Almizcle blanco, Azafrán",
         description: "La frescura mística de mil pétalos de rosa damascena cosechados al amanecer, realzados por el toque especiado del azafrán.",
         icon: "fa-spa",
-        badge: "Popular"
+        badge: "Popular",
+        image: ""
     },
     {
         id: 5,
@@ -68,7 +73,8 @@ const products = [
         notes: "Oud puro, Azafrán iraní, Pachulí",
         description: "Una colisión majestuosa entre el azafrán más puro del mundo y resinas oscuras de oud. Lujo nocturno en su máxima expresión.",
         icon: "fa-gem",
-        badge: "Limitado"
+        badge: "Limitado",
+        image: ""
     },
     {
         id: 6,
@@ -82,7 +88,8 @@ const products = [
         notes: "Almizcle blanco, Ámbar gris, Lirio del valle",
         description: "Suave, limpio y persistente. Un attar magnético que se funde íntimamente con la piel creando una segunda capa aromática.",
         icon: "fa-feather",
-        badge: "Esencial"
+        badge: "Esencial",
+        image: ""
     },
     {
         id: 7,
@@ -96,7 +103,8 @@ const products = [
         notes: "Incienso sagrado, Madera de agar, Clavo",
         description: "Inspirado en los rituales aromáticos de los antiguos palacios. Un aroma balsámico, ahumado y espiritualmente profundo.",
         icon: "fa-dharmachakra",
-        badge: "Artesanal"
+        badge: "Artesanal",
+        image: ""
     },
     {
         id: 8,
@@ -110,7 +118,8 @@ const products = [
         notes: "Jazmín sambac, Miel dorada, Ámbar",
         description: "Dulce, embriagador y misterioso. Flores blancas de jazmín nocturno maceradas en aceites ricos de miel y ámbar.",
         icon: "fa-seedling",
-        badge: "Delicado"
+        badge: "Delicado",
+        image: ""
     },
     {
         id: 9,
@@ -124,7 +133,8 @@ const products = [
         notes: "Canela, dátiles, praliné, vainilla",
         description: "Una fragancia cálida y dulce con un carácter especiado y gourmand.",
         icon: "fa-mug-hot",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 10,
@@ -138,7 +148,8 @@ const products = [
         notes: "Frutas, flores, vainilla",
         description: "Un perfil femenino, suave y dulce con acordes frutales y florales.",
         icon: "fa-heart",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 11,
@@ -152,7 +163,8 @@ const products = [
         notes: "Pimienta negra, tabaco, café, vainilla",
         description: "Una mezcla intensa de especias y acordes cálidos para uso diario o nocturno.",
         icon: "fa-shield-halved",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 12,
@@ -166,7 +178,8 @@ const products = [
         notes: "Aromáticos, especias, maderas",
         description: "Una fragancia masculina aromática con un fondo amaderado.",
         icon: "fa-user-tie",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 13,
@@ -180,7 +193,8 @@ const products = [
         notes: "Azafrán, nuez moscada, oud, pachulí",
         description: "Una composición oriental marcada por el oud y las especias.",
         icon: "fa-crown",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 14,
@@ -194,7 +208,8 @@ const products = [
         notes: "Oud, maderas, vainilla, humo",
         description: "Acordes ahumados y amaderados con un matiz dulce de vainilla.",
         icon: "fa-tree",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 15,
@@ -208,7 +223,8 @@ const products = [
         notes: "Piña, azafrán, oud, maderas",
         description: "Una salida frutal que se combina con especias y notas amaderadas.",
         icon: "fa-horse",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 16,
@@ -222,7 +238,8 @@ const products = [
         notes: "Azafrán, almendra amarga, ámbar",
         description: "Un perfil dulce y ambarado con una apertura especiada.",
         icon: "fa-gem",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 17,
@@ -236,7 +253,8 @@ const products = [
         notes: "Frutas, flores, almizcle",
         description: "Una fragancia floral y frutal de carácter suave y luminoso.",
         icon: "fa-flower",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 18,
@@ -250,7 +268,8 @@ const products = [
         notes: "Vainilla, cacao, frutos rojos",
         description: "Un aroma gourmand dulce con notas cálidas y cremosas.",
         icon: "fa-cookie-bite",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 19,
@@ -264,7 +283,8 @@ const products = [
         notes: "Cítricos, especias, abedul, almizcle",
         description: "Una fragancia masculina cítrica y amaderada de estela marcada.",
         icon: "fa-moon",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 20,
@@ -278,7 +298,8 @@ const products = [
         notes: "Manzana, canela, vainilla, ámbar",
         description: "Un perfil nocturno dulce y especiado con fondo ambarado.",
         icon: "fa-clock",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 21,
@@ -292,7 +313,8 @@ const products = [
         notes: "Cítricos, notas acuáticas, maderas",
         description: "Una fragancia fresca con acordes acuáticos y un fondo amaderado.",
         icon: "fa-water",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 22,
@@ -306,7 +328,8 @@ const products = [
         notes: "Azafrán, oud, rosa, praliné",
         description: "Una composición intensa de oud y rosa con un toque dulce.",
         icon: "fa-heart",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 23,
@@ -320,7 +343,8 @@ const products = [
         notes: "Frutas, ámbar, vainilla, maderas",
         description: "Una fragancia frutal y ambarada con un fondo cálido.",
         icon: "fa-sun",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 24,
@@ -334,7 +358,8 @@ const products = [
         notes: "Cuero, especias, maderas",
         description: "Un perfil de cuero intenso con acordes especiados y amaderados.",
         icon: "fa-fire",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     },
     {
         id: 25,
@@ -348,7 +373,8 @@ const products = [
         notes: "Frutas, rosa, almizcle, ámbar",
         description: "Un aroma dulce y frutal con un corazón floral y fondo almizclado.",
         icon: "fa-leaf",
-        badge: "Consultar"
+        badge: "Consultar",
+        image: ""
     }
 ];
 
@@ -358,18 +384,15 @@ let currentCurrency = localStorage.getItem('fraganciasNsCurrency') || 'USD';
 let currentFilter = 'all';
 let currentGender = 'all';
 let currentSearch = '';
-
-const exchangeRates = {
-    USD: 1,
-    EUR: 0.92
-};
+let bcvRate = null;
 
 const currencySymbols = {
     USD: '$',
-    EUR: '€'
+    VES: 'Bs. '
 };
 
 const storeWhatsApp = '584123028058';
+const bcvRateUrl = 'https://ve.dolarapi.com/v1/dolares/oficial';
 
 // Inicialización
 document.addEventListener('DOMContentLoaded', () => {
@@ -385,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
         console.error('No se pudo recuperar el carrito guardado.', error);
     }
-    if (!Object.prototype.hasOwnProperty.call(exchangeRates, currentCurrency)) {
+    if (!['USD', 'VES'].includes(currentCurrency)) {
         currentCurrency = 'USD';
     }
     document.getElementById('currencySelect').value = currentCurrency;
@@ -393,6 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     setupEventListeners();
     updateCartUI();
+    loadBcvRate();
 });
 
 function setupEventListeners() {
@@ -512,8 +536,45 @@ function setupEventListeners() {
 }
 
 function formatPrice(priceUSD) {
-    const converted = priceUSD * exchangeRates[currentCurrency];
-    return `${currencySymbols[currentCurrency]}${converted.toFixed(2)}`;
+    if (currentCurrency === 'VES') {
+        if (bcvRate === null) return 'Tasa BCV no disponible';
+        const converted = priceUSD * bcvRate;
+        return `${currencySymbols.VES}${new Intl.NumberFormat('es-VE', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(converted)}`;
+    }
+    return `${currencySymbols.USD}${priceUSD.toFixed(2)}`;
+}
+
+async function loadBcvRate() {
+    const rateInfo = document.getElementById('bcvRateInfo');
+    try {
+        const response = await fetch(bcvRateUrl, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Respuesta HTTP ${response.status}`);
+        const data = await response.json();
+        const rate = Number(data.promedio);
+        if (data.moneda !== 'USD' || data.fuente !== 'oficial' || !Number.isFinite(rate) || rate <= 0) {
+            throw new Error('La respuesta no contiene una tasa oficial válida para USD.');
+        }
+
+        bcvRate = rate;
+        const updatedAt = new Date(data.fechaActualizacion);
+        const dateLabel = Number.isNaN(updatedAt.getTime())
+            ? ''
+            : ` · ${new Intl.DateTimeFormat('es-VE').format(updatedAt)}`;
+        rateInfo.textContent = `1 USD = ${new Intl.NumberFormat('es-VE', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(bcvRate)} Bs.${dateLabel}`;
+        rateInfo.title = `Tasa oficial BCV${dateLabel}. Haz clic para visitar el BCV.`;
+    } catch (error) {
+        console.error('No se pudo consultar la tasa oficial del BCV.', error);
+        rateInfo.textContent = 'Tasa BCV no disponible';
+        rateInfo.title = 'No se pudo actualizar la tasa oficial del BCV. Inténtalo más tarde.';
+    }
+    renderProducts();
+    updateCartUI();
 }
 
 // Renderizar Catálogo de Productos
@@ -546,6 +607,10 @@ function renderProducts() {
         card.className = "bg-dark-surface border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:border-cyan-neon transition-all duration-300 group shadow-lg";
         const genderLabel = { ella: 'Para ella', el: 'Para él', unisex: 'Unisex' }[p.gender];
         const priceLabel = p.priceUSD === null ? 'Consultar' : formatPrice(p.priceUSD);
+        const imageContent = p.image
+            ? `<img src="${p.image}" alt="${p.name}" class="absolute inset-0 h-full w-full object-cover">`
+            : `<i class="fa-solid ${p.icon} text-4xl text-cyan-neon drop-shadow-[0_0_10px_rgba(0,245,212,0.4)] group-hover:scale-110 transition-transform duration-300"></i>
+               <span class="text-[10px] uppercase tracking-widest text-white/50 mt-3 font-semibold">${genderLabel} • 100ml</span>`;
         
         let starsHTML = '';
         for (let i = 0; i < 5; i++) {
@@ -564,8 +629,7 @@ function renderProducts() {
                     <div class="absolute top-3 right-3 text-white/40 text-xs font-mono">
                         ${p.arabicName}
                     </div>
-                    <i class="fa-solid ${p.icon} text-4xl text-cyan-neon drop-shadow-[0_0_10px_rgba(0,245,212,0.4)] group-hover:scale-110 transition-transform duration-300"></i>
-                    <span class="text-[10px] uppercase tracking-widest text-white/50 mt-3 font-semibold">${genderLabel} • 100ml</span>
+                    ${imageContent}
                 </div>
                 
                 <div class="flex items-center justify-between mb-1">
@@ -602,9 +666,11 @@ function quickView(id) {
     modalContent.innerHTML = `
         <div class="w-full h-80 rounded-2xl bg-dark-deep border border-white/10 flex flex-col items-center justify-center relative overflow-hidden">
             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-neon/10 via-transparent to-transparent"></div>
-            <i class="fa-solid ${product.icon} text-6xl text-cyan-neon drop-shadow-[0_0_15px_rgba(0,245,212,0.5)] mb-4"></i>
-            <span class="text-sm font-bold tracking-widest text-gold">${product.arabicName}</span>
-            <span class="text-xs text-white/50 uppercase tracking-wider mt-1">Extracto de Perfume • 100ml</span>
+            ${product.image
+                ? `<img src="${product.image}" alt="${product.name}" class="absolute inset-0 h-full w-full object-contain p-4">`
+                : `<i class="fa-solid ${product.icon} text-6xl text-cyan-neon drop-shadow-[0_0_15px_rgba(0,245,212,0.5)] mb-4"></i>
+                   <span class="text-sm font-bold tracking-widest text-gold">${product.arabicName}</span>
+                   <span class="text-xs text-white/50 uppercase tracking-wider mt-1">Extracto de Perfume • 100ml</span>`}
         </div>
         <div class="space-y-4">
             <div>
